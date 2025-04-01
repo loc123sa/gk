@@ -1,0 +1,46 @@
+# Robot controller configuration for a 4-wheel differential drive robot
+abcd:
+  # Publish rate for joint states
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Differential drive controller
+  diff_drive_controller:
+    type: diff_drive_controller/DiffDriveController
+    publish_rate: 50
+    pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.03]
+
+    # Joints
+    left_wheel_joints: ['left1_wheel_link_joint', 'left2_wheel_link_joint']
+    right_wheel_joints: ['right1_wheel_link_joint', 'right2_wheel_link_joint']
+
+    # Wheel separation and radius (adjust based on your robot's geometry)
+    wheel_separation: 0.18  # Distance between left and right wheels (approximated from URDF)
+    wheel_radius: 0.041     # Wheel radius (approximated, adjust based on STL or design)
+
+    # Velocity and acceleration limits
+    linear:
+      x:
+        has_velocity_limits: true
+        max_velocity: 1.0    # m/s
+        has_acceleration_limits: true
+        max_acceleration: 2.0 # m/s^2
+    angular:
+      z:
+        has_velocity_limits: true
+        max_velocity: 2.0    # rad/s
+        has_acceleration_limits: true
+        max_acceleration: 4.0 # rad/s^2
+
+    # Base frame and odometry frame
+    base_frame_id: base_link
+    odom_frame_id: odom
+
+    # Topics
+    cmd_vel_topic: /cmd_vel
+    odom_topic: /odom
+
+    # Enable odometry publishing
+    enable_odom_tf: true

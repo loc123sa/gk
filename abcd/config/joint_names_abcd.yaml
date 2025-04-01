@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'camera_joint', 'left1_wheel_link_joint', 'left2_wheel_link_joint', 'right1_wheel_link_joint', 'right2_wheel_link_joint', 'tay1_joint', 'tay2_joint', 'imu', ]

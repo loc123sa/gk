@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="abcd">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.00134563507978511 -2.02581921593115E-05 0.0212281613916468"
+        rpy="0 0 0" />
+      <mass
+        value="9.79985997865253" />
+      <inertia
+        ixx="0.0164140264972666"
+        ixy="2.86811488996906E-07"
+        ixz="-1.5067102447872E-06"
+        iyy="0.0480735946553678"
+        iyz="-2.16128335468346E-08"
+        izz="0.0617116986752876" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="camera_Link">
+    <inertial>
+      <origin
+        xyz="-4.55330217974392E-14 0 -0.00599202985851255"
+        rpy="0 0 0" />
+      <mass
+        value="0.00728059546505731" />
+      <inertia
+        ixx="1.23208431153556E-07"
+        ixy="9.28154432510641E-24"
+        ixz="-5.7832508426874E-23"
+        iyy="1.23208431153556E-07"
+        iyz="-4.69457027318134E-23"
+        izz="1.14807020557045E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/camera_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/camera_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="camera_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.12225 -0.0010282 0.046"
+      rpy="1.5708 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="lidar_Link">
+    <inertial>
+      <origin
+        xyz="0.000153907989378407 0.00676797122098363 -0.0224318722671598"
+        rpy="0 0 0" />
+      <mass
+        value="1.22840227972681" />
+      <inertia
+        ixx="0.000886765481793313"
+        ixy="3.28322371554214E-06"
+        ixz="1.68989093208162E-06"
+        iyy="0.000567648619195593"
+        iyz="0.000146088586939935"
+        izz="0.00101367876948125" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/lidar_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/lidar_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="lidar_joint"
+    type="fixed">
+    <origin
+      xyz="0.010786 0.0056943 0.0987"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="left1_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.38777878078145E-17 -2.77555756156289E-17 8.67361737988404E-19"
+        rpy="0 0 0" />
+      <mass
+        value="0.678584013175395" />
+      <inertia
+        ixx="0.000360497756999429"
+        ixy="-8.09870282623048E-40"
+        ixz="1.17025383189539E-18"
+        iyy="0.000360497756999429"
+        iyz="-4.5364235985708E-37"
+        izz="0.00069554861350478" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/left1_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/left1_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left1_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.093647 -0.090012 0.0205"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left1_wheel_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="left2_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0 1.73472347597681E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.678584013175395" />
+      <inertia
+        ixx="0.000360497756999429"
+        ixy="-8.09870282623048E-40"
+        ixz="1.17030147749868E-18"
+        iyy="0.000360497756999429"
+        iyz="-4.5364235985708E-37"
+        izz="0.00069554861350478" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/left2_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/left2_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left2_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.093219 -0.090012 0.0205"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="left2_wheel_Link" />
+    <axis
+      xyz="0 0 -1" />
+  </joint>
+  <link
+    name="right1_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 0 2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.678584013175396" />
+      <inertia
+        ixx="0.000360497756999429"
+        ixy="-8.09870282622094E-40"
+        ixz="1.16725215888856E-18"
+        iyy="0.000360497756999429"
+        iyz="-4.53642359857081E-37"
+        izz="0.000695548613504781" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/right1_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/right1_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right1_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="-0.093645 0.090012 0.0205"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right1_wheel_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="right2_wheel_Link">
+    <inertial>
+      <origin
+        xyz="0 1.38777878078145E-17 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.678584013175395" />
+      <inertia
+        ixx="0.000360497756999428"
+        ixy="-1.55490309620423E-21"
+        ixz="-6.28921963336042E-21"
+        iyy="0.000360497756999428"
+        iyz="-4.64544632009739E-21"
+        izz="0.000695548613504779" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/right2_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/right2_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right2_wheel_link_joint"
+    type="continuous">
+    <origin
+      xyz="0.093215 0.090012 0.0205"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="base_link" />
+    <child
+      link="right2_wheel_Link" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="tay1_Link">
+    <inertial>
+      <origin
+        xyz="-9.65325780630244E-07 -0.000173956262423419 0.0112941437857941"
+        rpy="0 0 0" />
+      <mass
+        value="0.1032156" />
+      <inertia
+        ixx="3.02416803606903E-05"
+        ixy="3.66060803139861E-10"
+        ixz="2.5851798711052E-09"
+        iyy="2.72954578390213E-05"
+        iyz="4.65861615945074E-07"
+        izz="5.46934910894736E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/tay1_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/tay1_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tay1_joint"
+    type="prismatic">
+    <origin
+      xyz="-0.085478 -0.0012271 0.0978"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="tay1_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="tay2_Link">
+    <inertial>
+      <origin
+        xyz="0 6.13398221105399E-15 -0.0350000000000032"
+        rpy="0 0 0" />
+      <mass
+        value="0.02394" />
+      <inertia
+        ixx="9.825375E-06"
+        ixy="9.35713789238634E-24"
+        ixz="-2.96504188459818E-23"
+        iyy="9.95554875E-06"
+        iyz="2.59149846794491E-21"
+        izz="2.2992375E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/tay2_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/tay2_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="tay2_joint"
+    type="prismatic">
+    <origin
+      xyz="1.9422E-05 0.086269 0.03724"
+      rpy="1.5708 0 3.1416" />
+    <parent
+      link="tay1_Link" />
+    <child
+      link="tay2_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="imu_Link">
+    <inertial>
+      <origin
+        xyz="1.38777878078145E-17 0 -0.00249999999999803"
+        rpy="0 0 0" />
+      <mass
+        value="0.0116509328220928" />
+      <inertia
+        ixx="4.25569323350397E-07"
+        ixy="6.48329308695075E-24"
+        ixz="2.33995328475761E-24"
+        iyy="2.70315132514325E-07"
+        iyz="-1.57508292967511E-21"
+        izz="6.47338902439336E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/imu_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.2 0.2 0.2 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://abcd/meshes/imu_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu"
+    type="prismatic">
+    <origin
+      xyz="0.10998 0.00067806 0.046"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_Link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="0"
+      velocity="0" />
+  </joint>
+
+
+
+
+
+
+  <gazebo reference="lidar_Link">
+   <sensor type="ray" name="lidar_sensor">
+     <pose>0 0 0 0 0 0</pose>
+     <visualize>true</visualize>
+     <update_rate>30</update_rate>
+     <ray>
+    <scan>
+      <horizontal>
+        <samples>720</samples>
+        <resolution>1</resolution>
+        <min_angle>-1.5708</min_angle>
+        <max_angle>1.5708</max_angle>
+      </horizontal>
+    </scan>
+    <range>
+      <min>0.1</min>
+      <max>30.0</max>
+      <resolution>0.01</resolution>
+    </range>
+    <noise>
+      <type>gaussian</type>
+      <mean>0.0</mean>
+      <stddev>0.01</stddev>
+    </noise>
+     </ray>
+     <plugin name="gazebo_ros_laser" filename="libgazebo_ros_laser.so">
+    <topicName>/scan</topicName>
+    <frameName>lidar_Link</frameName>
+     </plugin>
+   </sensor>
+  </gazebo>
+   
+
+    <gazebo reference="imu_Link">
+    <gravity>true</gravity>
+    <sensor name="imu_sensor" type="imu">
+      <always_on>true</always_on>
+      <update_rate>100</update_rate>
+      <visualize>true</visualize>
+      <topic>__default_topic__</topic>
+      <plugin filename="libgazebo_ros_imu_sensor.so" name="imu_plugin">
+        <topicName>imu</topicName>
+        <bodyName>imu_Link</bodyName>
+        <updateRateHZ>10.0</updateRateHZ>
+        <gaussianNoise>0.0</gaussianNoise>
+        <xyzOffset>0 0 0</xyzOffset>
+        <rpyOffset>0 0 0</rpyOffset>
+        <frameName>imu_Link</frameName>
+        <initialOrientationAsReference>false</initialOrientationAsReference>
+      </plugin>
+      <pose>0 0 0 0 0 0</pose>
+    </sensor>
+  </gazebo>
+
+<!-- camera -->
+  <gazebo reference="camera_Link">
+    <sensor type="camera" name="camera1">
+      <update_rate>30.0</update_rate>
+      <camera name="head">
+        <horizontal_fov>1.3962634</horizontal_fov>
+        <image>
+          <width>800</width>
+          <height>800</height>
+          <format>R8G8B8</format>
+        </image>
+        <clip>
+          <near>0.02</near>
+          <far>300</far>
+        </clip>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise is sampled independently per pixel on each frame.
+               That pixel's noise value is added to each of its color
+               channels, which at that point lie in the range [0,1]. -->
+          <mean>0.0</mean>
+          <stddev>0.007</stddev>
+        </noise>
+      </camera>
+      <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+        <alwaysOn>true</alwaysOn>
+        <updateRate>0.0</updateRate>
+        <cameraName>rrbot/camera1</cameraName>
+        <imageTopicName>image_raw</imageTopicName>
+        <cameraInfoTopicName>camera_info</cameraInfoTopicName>
+        <frameName>camera_Link</frameName>
+        <hackBaseline>0.07</hackBaseline>
+        <distortionK1>0.0</distortionK1>
+        <distortionK2>0.0</distortionK2>
+        <distortionK3>0.0</distortionK3>
+        <distortionT1>0.0</distortionT1>
+        <distortionT2>0.0</distortionT2>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+ 
+
+
+</robot>
